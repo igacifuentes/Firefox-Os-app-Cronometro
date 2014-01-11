@@ -1,0 +1,3 @@
+El archivo index.html es el que permite instalar la aplicacion de Forma Package
+->Direcciona hacia package.manifest
+->El package se encuentra en https://googledrive.com/host/0B063CHiu5VgLSjRnQmNxV0FheTQ/package.zip

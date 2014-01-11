@@ -1,0 +1,16 @@
+{
+  "name": "Cronometro",
+  "description": "Cronometro con diseño agradable y con eventos tactiles",
+  "launch_path": "/app.html",
+  "icons": {
+    "128": "/images/app_icon_128.png",
+    "60": "/images/app_icon_60.png"
+  },
+  "version": "1.0",
+  "developer": {
+    "name": "Giovanny Cifuentes",
+    "url": "http://www.giovannycifuentes.hol.es"
+  },
+  "default_locale": "es",
+  "orientation": ["portrait-primary"]
+}
