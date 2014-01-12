@@ -12,5 +12,11 @@
     "url": "http://www.giovannycifuentes.hol.es"
   },
   "default_locale": "es",
-  "orientation": ["portrait-primary"]
+  "orientation": ["portrait-primary"],
+"permissions": {
+  "audio-channel-content":{
+    "description":"Use the audio channel for the music player"
+  }
+}
+
 }
