@@ -220,10 +220,10 @@
       </header>
       <nav>
         <ul>
-          <li><a href="#" class="confirmacion">Cronometro</a></li>
+          <li><a href="#" class="confirmacion" id="crono">Cronometro</a></li>
         </ul>
         <ul>
-          <li><a href="#" class="confirmacion">Temporizador</a></li>
+          <li><a href="#" class="confirmacion" id="temp">Temporizador</a></li>
         </ul>
         <ul>
           <li><a href="#" class="confirmacion">Pomodoro</a></li>
@@ -240,22 +240,49 @@
         </ul>
       </nav>
     </section>
-	<!-- Menu Lateral -->
-
-
+		<!-- contenido del inicio llamado en inicio-->
     <section id="drawer" role="region">
+   
+	</section> 
+	<!-- fin contenido -->
+  </section> 
+<!-- fin index -->
 
+<!-- interfaz de las Actividades-->
+
+  <!--···························· lista de tiempos····························-->
+	<section role="region" id="lists"data-position="right">
+    	<header class="fixed">
+      		<a id="btn-lists-back" href="#"><span class="icon icon-back">back</span></a>
+	
+      		<h1>Lista de Tiempos</h1>
+    	</header>
+    	<article class="content scrollable header">
+      		<section data-type="list">
+				<br>
+        		<header>Tiempos</header>
+        			<ul class="listaTiempos">
+	        			<li>
+            				<p>00 : 00 : 00.00</p>
+          				</li>
+        			</ul>
+      		</section>
+   		</article>
+    </section>
+
+<!-- Cronometro ------------------------------------------->
+
+<section id="menucrono" role="region">
 <!-- Cabecera -->
       <header class="fixed">
-        <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
-        <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+            <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
 		          <menu type="toolbar">
-            <a href="#" class="nuevo" id="lista"><span class="icon action-icon calendar-today">lista</span></a>
-          </menu>
+      			      <a href="#" class="nuevo" id="lista"><span class="icon action-icon calendar-today">lista</span></a>
+          		  </menu>
         <h1>Cronometro<em> V 1.0</em></h1>
 
       </header>
-<!-- contenido-->
+<!-- contenido -->
  <article class="content scrollable header">
       <section data-type="list">
 		<br>
@@ -294,33 +321,95 @@
     </article>
 	<!-- fin contenido -->
     </section> 
-  </section> 
-<!-- fin index -->
+<!--------------fin cronometro-->
 
-<!-- interfaz de las Actividades
+<!-- Temporizador -------------------------------------------------------->
 
-  <!--···························· lista de tiempos····························-->
-	<section role="region" id="lists"data-position="right">
-    	<header class="fixed">
-      		<a id="btn-lists-back" href="#"><span class="icon icon-back">back</span></a>
-      		<h1>Lista de Tiempos</h1>
-    	</header>
-    	<article class="content scrollable header">
-      		<section data-type="list">
-				<br>
-        		<header>Tiempos</header>
-        			<ul class="listaTiempos">
-	        			<li>
-            				<p>00 : 00 : 00.00</p>
-          				</li>
-        			</ul>
-      		</section>
-   		</article>
-    </section>
+<section id="menutemp" role="region">
+<!-- Cabecera -->
+      <header class="fixed">
+            <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
+        <h1>Temporizador<em> V 1.0</em></h1>
+
+      </header>
+<!-- contenido -->
+ <article class="content scrollable header">
+      <section data-type="list">
+		<br>
+        <header>Tiempo Restante</header>
+       		<div id="temporizador">
+				<div id="tiemporestante">
+ 			 		<h2 style="line-height:0%;font-size: 1.3rem;">Segundos</h2>
+		     		<div role="slider" aria-valuemin="0" aria-valuenow="30" aria-valuemax="59" aria-valuetext="slider description" id="slideseg">
+          				<label>0</label>
+          				<label style="color :#000;" id="segtemp">&nbsp&nbsp&nbsp&nbsp30</label>
+						<label>59</label>         
+							<div>
+            					<progress value="30" max="59"></progress>
+            					<button>handler</button>
+          					</div>
+        	  		</div>
+
+ 			 		<h2 style="line-height:0%;font-size: 1.3rem;">Minutos</h2>
+		     			<div role="slider" aria-valuemin="0" aria-valuenow="30" aria-valuemax="59" aria-valuetext="slider description" id="slidemin">
+          					<label>0</label>
+          					<label style="color :#000;" id="mintemp">&nbsp&nbsp&nbsp&nbsp30</label>
+							<label>59</label>         
+								<div>
+            						<progress value="30" max="59"></progress>
+            						<button>handler</button>
+          						</div>
+        	 			</div>
+
+ 				 	 <h2 style="line-height:0%;font-size: 1.3rem;">Horas</h2>
+		     			<div role="slider" aria-valuemin="0" aria-valuenow="30" aria-valuemax="59" aria-valuetext="slider description" id="slidehor">
+          					<label>0</label>
+          					<label style="color :#000;" id="hortemp">&nbsp&nbsp&nbsp&nbsp30</label>
+							<label>59</label>         
+								<div>
+            						<progress value="30" max="59"></progress>
+            						<button>handler</button>
+          						</div>
+        	  			</div><br>
+			  	</div>
+
+					<div id="cuerpotemp">
+						<br>
+			 			<strong style="font-size: 4.0rem;"id="textotemp">00 : 00 : 00 . 00</strong>
+						<br>
+						<br>
+						<br>
+					</div>
+						
+				</div>
+					<div id="botontemp">
+					  <ul role="tablist" data-type="filter" data-items="2">
+         				 <li id="filter2-1" class="playtemp"role="tab"><a class="botontemp" href="#">Iniciar</a></li>
+          				 <li id="filter2-3" class="stoptemp" role="tab"><a href="#">Reiniciar</a></li>
+		         	  </ul>
+					</div>  
+	 				<table>
+						<td>
+							<div id="slidetemp">
+								<div id="imagen1temp"><img src="images/app_slide.png"></img></div>
+							</div>
+						</td>
+						<td></td><td></td><td></td><td></td><td></td><td></td>
+						<td>
+							<img id="slideDowntemp" src="images/app_slide4.png"></img>
+						</td>
+					</table>       
+		</section>
+    </article>
+	<!-- fin contenido -->
+    </section> 
+<!--------------fin temporizador ------------------------>
 
   <script type="text/javascript" defer src="js/status.js"></script>
   <script type="text/javascript" defer src="js/seekbars.js"></script>
-  <script type="text/javascript" defer src="js/app.js"></script>	
+  <script type="text/javascript" defer src="js/appCronometro.js"></script>	
+  <script type="text/javascript" defer src="js/appTemporizador.js"></script>	
+  <script type="text/javascript" defer src="js/menu.js"></script>
 
   
 	<!-- Eventos Tactiles -->
